@@ -1,0 +1,215 @@
+/* footer */
+
+.footer {
+    background: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+
+
+&__icon-title {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+&__svg-list {
+@extend %list-posisition;
+    gap: 10px;
+    margin-right: 93px;
+}
+
+&__svg-item {
+    border-radius: 100%;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.10);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+&__svg-item:hover,
+&__svg-item:focus-within {
+    background: #2196F3;
+    transform: scale(1.125);
+}
+
+&__icon {
+    width: 20px;
+    height: 20px;
+    fill: #FFF;
+}
+
+&__list {
+    width: 250px;
+}
+
+& .container {
+    display: flex;
+}
+
+&__box-svg {
+    padding-top: 72px;
+    padding-left: 70px;
+}
+
+&__write {
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(33, 150, 243, 0);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    display: flex;
+    margin-right: 12px;
+    padding: 15px 20px 15px 16px;
+}
+
+&__send {
+    width: 200px;
+    height: 50px;
+    @extend %flex-shrink;
+    border-radius: 4px;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+    padding: 7px 62px 10px 28px;
+    border: 5px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+&__send:hover {
+    background-color: #075391;
+
+}
+
+
+&__send:focus {
+    background-color: #075391;
+}
+
+&__icon-telegram {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+    @extend %flex-shrink;
+    position: absolute;
+    right: -575px;
+
+
+
+}
+
+&__logo {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #2196f3;
+    padding-top: 60px;
+    display: flex;
+}
+
+&__word {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: rgb(252, 252, 252);
+}
+
+&__info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    display: flex;
+    margin-top: 20px;
+
+    color: #FFFFFF;
+
+}
+
+&__phonenumber {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    display: flex;
+    padding-bottom: 60px;
+    margin-top: 9px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+&__address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    display: flex;
+    margin-top: 9px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+&__telegram {
+    position: relative;
+@extend %list-posisition;
+    width: 570px;
+    height: 86px;
+}
+
+&__telegram-content {
+    position: absolute;
+    top: 209px;
+    right: 575px;
+@extend %list-posisition;
+    width: 570px;
+    height: 86px;
+}
+
+&__telegram-form {
+    margin-bottom: 260px;
+    margin-left: 1207px;
+}
+
+&__telegram-lable {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+
+
+}
+
+&__input-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+}

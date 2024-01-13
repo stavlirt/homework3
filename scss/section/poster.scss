@@ -1,0 +1,124 @@
+
+.poster {
+    padding-top: 50px;
+    padding-bottom: 94px;
+
+    
+
+
+
+
+
+&__title {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: #212121;
+    margin: 24px;
+
+}
+
+&__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin: 20px;
+}
+
+&__img {
+    width: 370px;
+    height: 294px;
+}
+
+
+
+
+
+&__item {
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-basis: calc((100% - 65px) / 3);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 250ms linear 100ms,
+        box-shadow 300ms linear 100ms,
+        transform 150ms linear 100ms;
+    animation: opacity-poster 1.5s ease 50ms both;
+}
+
+@keyframes opacity-poster {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+&__item:hover {
+    transform: scale(1.050);
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+&__item:focus-within {
+    transform: scale(1.050);
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+
+&__text__card:hover {
+    opacity: 1;
+    width: 100%;
+    height: 395px;
+
+
+}
+
+&__text__card:focus-within {
+    opacity: 1;
+    width: 100%;
+    height: 395px;
+
+
+}
+
+
+
+
+
+&__box__card {
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    @include overlay;
+    padding: 63px 24px;
+    transform: translatey(-100%);
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+&__item:hover &__box__card,
+&__link:focus &__box__card {
+    transform: translateY(0%);
+}
+
+&__text__card {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    line-height: 155.556%;
+}
+&__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+}
