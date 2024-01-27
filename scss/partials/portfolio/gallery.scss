@@ -1,0 +1,144 @@
+.gallery {
+    @include block-model(0, 0 0 60px);
+  
+    overflow: hidden;
+  
+    @media screen and (min-width: 1200px) {
+      @include block-model(0, 0 0 94px);
+    }
+  
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+  
+      @media screen and (min-width: 480px) {
+        display: grid;
+        grid-template: repeat(9, auto) / repeat(1, 450px);
+      }
+  
+      @media screen and (min-width: 768px) {
+        grid-template: repeat(5, auto) / repeat(2, 354px);
+      }
+  
+      @media screen and (min-width: 1200px) {
+        grid-template: repeat(3, auto) / repeat(3, 370px);
+      }
+    }
+  
+    &__item {
+      @include block-model(0, 0, 1px solid #eeeeee);
+      // @include size(100%); 
+  
+      // @media screen and (min-width: 480px) {
+      //   @include size(450px); 
+      // }
+  
+      // @media screen and (min-width: 768px) {
+      //   @include size(354px); 
+      // }
+    }
+  
+    &__focus {
+      @include size(auto, 100%);
+  
+      transition: box-shadow $transition;
+  
+      &:hover,
+      &:focus {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+          0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+      }
+  
+      &:hover > .gallary__overflow::before,
+      &:focus > .gallary__overflow::before {
+        top: 0;
+      }
+  
+      &:hover .gallery__text,
+      &:focus .gallery__text {
+        top: 77px;
+  
+        @media screen and (min-width: 768px) {
+          top: 49px;
+        }
+  
+        @media screen and (min-width: 1200px) {
+          top: 63px;
+        }
+      }
+    }
+  
+    &__box {
+      @include block-model(0, 20px 24px);
+    }
+  
+    .gallary__overflow {
+      position: relative;
+  
+      overflow: hidden;
+  
+      &::before {
+        content: "";
+  
+        position: absolute;
+        top: 500px;
+        left: 0;
+  
+        @include size(100%, 100%);
+        display: none;
+  
+        background-color: rgba(33, 150, 243, 0.9);
+  
+        transition: top $transition;
+  
+        @media screen and (min-width: 480px) {
+          display: block;
+        }
+      }
+    }
+  
+    &__img {
+      @include size(450px);
+    }
+  
+    &__text {
+      position: absolute;
+      top: 500px;
+      left: 24px;
+  
+      max-width: 402px;
+      display: none;
+  
+      @include text-styles(18px, 1.55, 0.54px);
+      color: $light-text-color;
+  
+      transition: top $transition;
+  
+      @media screen and (min-width: 480px) {
+        display: block;
+      }
+  
+      @media screen and (min-width: 768px) {
+        max-width: 306px;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        max-width: 322px;
+      }
+    }
+  
+    &__title {
+      @include block-model(0 0 4px);
+  
+      @include text-styles(18px, 2, 0.06em);
+      color: $text-color;
+      font-weight: 700;
+    }
+  
+    &__description {
+      @include text-styles(16px, 1.87, 3%);
+      color: #757575;
+    }
+  }

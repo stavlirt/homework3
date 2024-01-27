@@ -1,0 +1,82 @@
+.clients {
+    @include block-model(0, 60px 0);
+  
+    @media screen and (min-width: 1200px) {
+      @include block-model(0, 94px 0);
+    }
+  
+    &__title {
+      @include block-model(0 0 50px);
+  
+      @include text-styles(28px, normal, 1.08px);
+      color: $text-color;
+      text-align: center;
+      font-weight: 700;
+  
+      @media screen and (min-width: 1200px) {
+        @include text-styles(36px, normal, 1.08px);
+      }
+    }
+  
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+  
+      @media screen and (min-width: 480px) {
+        display: grid;
+        grid-template: repeat(3, 92px) / repeat(2, 210px);
+        gap: 30px;
+      }
+  
+      @media screen and (min-width: 768px) {
+        grid-template: repeat(2, 92px) / repeat(3, 226px);
+      }
+  
+      @media screen and (min-width: 1200px) {
+        grid-template: repeat(1, 92px) / repeat(6, 170px);
+      }
+    }
+  
+    &__item {
+      @include size(calc((100% - 30px) / 2));
+  
+      @media screen and (min-width: 480px) {
+        @include size();
+      }
+    }
+  
+    &__focus {
+      @include block-model(0, 12px 24px, 1px solid $grey, 4px);
+  
+      @extend %flex;
+  
+      cursor: pointer;
+  
+      transition: border $transition;
+  
+      @media screen and (min-width: 480px) {
+        @include block-model(0, 16px 32px, 1px solid $grey, 4px);
+      }
+  
+      &:hover,
+      &:focus {
+        @include block-model(0, 16px 32px, 1px solid $blue, 4px);
+      }
+  
+      &:hover .clients__icon,
+      &:focus .clients__icon {
+        fill: $blue;
+      }
+    }
+  
+    &__icon {
+      @include size(106px, 60px);
+  
+      fill: $grey;
+      outline: none;
+  
+      transition: fill $transition;
+    }
+  }

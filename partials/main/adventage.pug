@@ -1,0 +1,7 @@
+section.adventage
+	.container
+		ul.adventage__list
+			each adventageList in adventageListVar
+				li.adventage__item(data-aos=adventageList.aos, data-aos-duration="1000", data-aos-delay=adventageList.aosDelay)
+					h3.adventage__title= adventageList.titleContent
+					p.adventage__description= adventageList.textContent

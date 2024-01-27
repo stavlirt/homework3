@@ -1,0 +1,37 @@
+@keyframes reminderButton {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.2);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes borderRadius {
+  0% {
+    border-radius: 50%;
+  }
+  25% {
+    border-radius: 16px;
+  }
+  50% {
+    border-radius: 8px;
+  }
+  75% {
+    border-radius: 16px;
+  }
+  100% {
+    border-radius: 50%;
+  }
+}/*# sourceMappingURL=keyframes.css.map */

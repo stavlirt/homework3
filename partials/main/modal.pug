@@ -1,0 +1,33 @@
+.backdrop.is-hidden(data-modal)
+	.modal
+		.modal__container
+			form.modal__form
+				button.modal__close(data-modal-close type="button")
+					svg.modal__cross
+						use(href="./images/icons/sprite.svg#icon-cross")
+				.modal__fieldset
+					legend.modal__title Залиште свої дані, ми вам передзвонимо
+					ul.modal__list 	
+						each modalInputs in modalInputsVar
+							li.modal__item
+								label.modal__label(for=modalInputs.labelFor)= modalInputs.labelContent
+								.modal__position
+									input.modal__input(id=modalInputs.inputId type=modalInputs.inputType required autocomplete="off")
+									svg.modal__svg
+										use(href=modalInputs.useHref)
+					label.modal__label(for="textarea") Коментар
+					textarea.modal__textarea(id="textarea" placeholder="Введіть текст")
+
+				.modal__flex
+					.modal__block
+						input.modal__checkbox(id="checkbox" name="checkbox" type="checkbox" required)
+						span.modal__check
+							svg.modal__svg--check
+								use(href="./images/icons/sprite.svg#icon-check")
+						span.modal__fake
+							svg.modal__svg--fake
+								use(href="./images/icons/sprite.svg#icon-border")
+					label.modal__label--checkbox(for="checkbox")
+						span.modal__span Погоджуюся з розсилкою та приймаю
+						a.modal__conditions(href="./index.html") Умови договору
+				button.modal__btn(type="submit") Відправити

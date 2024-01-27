@@ -1,0 +1,48 @@
+.navigation {
+    @include block-model(0, 60px 0 40px);
+  
+    @media screen and (min-width: 768px) {
+      @include block-model(0, 60px 0 30px);
+    }
+  
+    @media screen and (min-width: 1200px) {
+      @include block-model(0, 94px 0 50px);
+    }
+  
+    &__list {
+      max-width: 326px;
+  
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+  
+      @media screen and (min-width: 768px) {
+        max-width: none;
+  
+        justify-content: center;
+      }
+    }
+  
+    &__btn {
+      @include block-model(0, 6px 21px 6px 23px, none, 4px);
+  
+      @include text-styles(16px, 1.62);
+      text-align: center;
+      color: $text-color;
+      font-weight: 500;
+  
+      background-color: #f5f4fa;
+  
+      transition: background-color $transition, color $transition,
+        box-shadow $transition;
+  
+      &:hover,
+      &:focus {
+        color: $light-text-color;
+  
+        background-color: $blue;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+          0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }

@@ -1,0 +1,12 @@
+mixin logo(secondLogoClasses)
+	a.logo(href="./index.html")
+		span.logo__span.logo__span--blue Web
+		span(class=secondLogoClasses) Studio
+
+mixin social(linkClass, iconClass)
+	ul.social
+		each socialList in socialListVar
+			li.social__item
+				a(href=socialList.linkHref target='_blank' class=linkClass)
+					svg(class=iconClass)
+						use(href=socialList.useHref)

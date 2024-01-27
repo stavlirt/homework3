@@ -1,39 +1,64 @@
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-a {
-    margin: 0;
+* {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    @include block-model();
+  }
+  
+  a {
+    display: block;
+  
     text-decoration: none;
-}
-
-ul {
+  
+    outline: none;
+    cursor: pointer;
+  }
+  
+  ul {
     margin: 0;
     padding: 0;
+  
     list-style: none;
-}
-
-img {
+  }
+  
+  img {
     display: block;
     width: 100%;
-}
-
-p{
-    margin: 0;
-}
-
-*{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button {
+    padding: 0;
+    border: none;
+    display: block;
+  
+    cursor: pointer;
+    display: block;
     outline: none;
-}
-
-body {
-    font-family: 'Roboto';
-}
-
-
-a,
-h2,
-p {
-    text-decoration: none;
-
-}
+  }
+  
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input {
+    outline: none;
+  }
+  
+  textarea {
+    outline: none;
+  }

@@ -1,0 +1,59 @@
+extends ./base/layout 
+
+block css 
+	link(rel="stylesheet" href="./dist/css/main.min.css")
+
+block content 
+
+	-
+		let navigationList = [
+			{
+				secondPageClass: 'header__link--active',
+				pageContent: 'Студія',
+				pageHref: './index.html'
+			},
+			{
+				secondPageClass: 'header__link--portfolio',
+				pageContent: 'Портфоліо',
+				pageHref: './portfolio.html'
+			},
+			{
+				secondPageClass: 'header__link--contacts',
+				pageContent: 'Контакти',
+				pageHref: './index.html'
+			}
+		]
+
+		let menuListVar = [
+			{
+				secondPageClass: 'menu__link--active',
+				pageContent: 'Студія',
+				pageHref: './index.html'
+			},
+			{
+				secondPageClass: 'menu__link--portfolio',
+				pageContent: 'Портфоліо',
+				pageHref: './portfolio.html'
+			},
+			{
+				secondPageClass: 'menu__link--contacts',
+				pageContent: 'Контакти',
+				pageHref: './index.html'
+			}
+		]
+
+	include ./utils/vars
+	include ./utils/mixins
+
+	include ./components/header
+	main
+		include ./partials/main/hero
+		include ./partials/main/adventage
+		include ./partials/main/classes
+		include ./partials/main/team
+		include ./partials/main/clients 
+	include ./components/footer
+	include ./partials/main/modal
+	include ./components/menu
+
+	include ./base/scripts

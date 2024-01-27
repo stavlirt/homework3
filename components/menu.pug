@@ -1,0 +1,19 @@
+.menu.is-hidden(data-menu)
+	button.menu__close(data-menu-close)
+		svg.menu__cross
+			use(href="./images/icons/sprite.svg#icon-cross")
+
+	ul.menu__pages 
+		each menuList in menuListVar
+			li.menu__page 
+				a(class=`menu__link ${menuList.secondPageClass}`, href=menuList.pageHref)= menuList.pageContent
+
+	ul.menu__list
+		each menuContacts in menuContactsVar
+			li.menu__item
+				a(class=`menu__contact ${menuContacts.secondLinkClass}`, href=menuContacts.linkHref)= menuContacts.linkContant
+
+	ul.menu__socials 
+		each menuSocials in menuSocialsVar
+			li.menu__social 
+				a.menu__link--social(href=menuSocials.linkHref, target="_blank")= menuSocials.linkContent

@@ -1,0 +1,7 @@
+section.navigation
+	.container
+		h2(hidden) Фільтр
+		ul.navigation__list
+			each navigationButtons in navigationButtonsVar
+				li.navigation__item
+					button.navigation__btn= navigationButtons

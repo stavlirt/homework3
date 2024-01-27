@@ -1,0 +1,8 @@
+section.classes
+  .container
+    h2.classes__title Чим ми займаємося
+    ul.classes__list
+      each classesList in classesListVar
+        li.classes__item(data-aos=classesList.aos, data-aos-duration="1000", data-aos-delay=classesList.aosDelay)
+            img.classes__img(src=classesList.imgSrc, alt=classesList.imgAlt)
+            p.classes__text= classesList.textContent

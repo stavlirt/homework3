@@ -1,0 +1,23 @@
+header.header
+	.container.header__container
+		.header__box
+			+logo('logo__span logo__span--black')
+			button.header__btn(data-menu-open)
+				ul.header__burger
+					li.header__line
+					li.header__line
+					li.header__line
+		
+		nav.header__navigation
+			ul.header__pages 
+				each pagesList in navigationList
+					li.header__page 
+						a(class=`header__link ${pagesList.secondPageClass}`, href=pagesList.pageHref)= pagesList.pageContent
+
+		ul.contacts-list.contacts-list--header
+			each contactsList in contactsListVar
+				li.contacts-list__contact
+					a.contacts-list__link.contacts-list__link--header(href=contactsList.linkHref)
+						svg(class=`contacts-list__icon ${contactsList.secondIconClass}`)
+							use(href=contactsList.useHref)
+						span= contactsList.linkContent

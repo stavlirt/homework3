@@ -1,0 +1,23 @@
+footer.footer(data-aos="fade-up" data-aos-duration="750")
+	.container.footer__container
+		.footer__box
+			.footer__flex
+				+logo('logo__span logo__span--white')
+				address.footer__adress м. Київ, пр-т Лесі Українки, 26
+				ul.contacts-list.contacts-list--footer
+					each footerList in footerListVar
+						li.contacts-list__contact.contacts-list__contact--footer
+							a.contacts-list__link(href=footerList.linkHref)= footerList.linkContent
+
+			.footer__flex
+				h2.footer__title приєднуйтесь
+				+social('social__focus social__focus--footer', 'social__icon social__icon--footer')
+
+		form.footer__form
+			.footer__flex
+				label.footer__label(for='email') Підпишіться на розсилку
+				input.footer__input(id='email' name='email' type='email' placeholder='E-mail' required)
+			button.footer__btn(type='submit')
+				span.footer__span--form Підписатися
+				svg.footer__icon--form
+					use(href='./images/icons/sprite.svg#icon-telegram')

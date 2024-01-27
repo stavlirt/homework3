@@ -1,13 +1,5 @@
-%list-posisition{
-    display: flex;
-   justify-content: center;
-    align-items: center;
-   }
-   
-   %flex-shrink{
-       flex-shrink: 0;
-   }
-   
-   %border{
-       border: 2px solid #2196f3;
-   }
+%flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

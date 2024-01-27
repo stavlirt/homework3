@@ -1,0 +1,55 @@
+.hero {
+    @include block-model(0, 118px 0);
+  
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/main/hero-mobile.webp) center / cover no-repeat #2f303a;
+  
+    @media screen and (min-width: 768px) {
+      background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/main/hero-tablet.webp) center / cover no-repeat #2f303a;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      @include block-model(0, 200px 0);
+      background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/main/hero-desktop.webp) center / cover no-repeat #2f303a;
+    }
+  
+    &__flex {
+      @extend %flex;
+      flex-direction: column;
+    }
+  
+    &__title {
+      @include block-model(0 0 30px);
+      max-width: 360px;
+  
+      @include text-styles(26px, 1.36, 0.06em);
+      color: $light-text-color;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 900;
+  
+      @media screen and (min-width: 1200px) {
+        max-width: 696px;
+  
+        @include text-styles(44px, 1.36, 0.06em);
+      }
+    }
+  
+    &__btn {
+      @include block-model(0, 10px 24px, none, 4px);
+  
+      @include text-styles(16px, 1.87, 0.06em);
+      color: $light-text-color;
+      font-weight: 700;
+      background-color: $blue;
+  
+      animation: reminderButton 4500ms cubic-bezier(0.4, 0, 0.2, 1) 3000ms
+        infinite;
+  
+      @media screen and (min-width: 1200px) {
+        @include block-model(0, 10px 32px, none, 4px);
+      }
+    }
+  }

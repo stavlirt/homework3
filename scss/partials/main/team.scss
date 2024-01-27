@@ -1,0 +1,73 @@
+
+.team {
+    @include block-model(0, 60px 0);
+  
+    @media screen and (min-width: 1200px) {
+      @include block-model(0, 94px 0);
+    }
+  
+    background-color: #f5f4fa;
+  
+    &__title {
+      @include block-model(0 0 50px);
+  
+      @include text-styles(28px, 1.16);
+      font-weight: 700;
+      color: $text-color;
+      text-align: center;
+  
+      @media screen and (min-width: 1200px) {
+        @include text-styles(36px, 1.16);
+      }
+    }
+  
+    &__list {
+      @extend %flex;
+      flex-wrap: wrap;
+      gap: 30px;
+  
+      @media screen and (min-width: 480px) {
+        display: grid;
+        grid-template: repeat(4, 1fr) / repeat(1, 450px);
+      }
+  
+      @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 354px);
+      }
+  
+      @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(4, 270px);
+      }
+    }
+  
+    &__item {
+      @include block-model(0, 0 0 24px, none, 0 0 4px 4px);
+  
+      background-color: $light-text-color;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+  
+      @media screen and (min-width: 1200px) {
+        @include block-model(0, 0 0 30px, none, 0 0 4px 4px);
+      }
+    }
+    
+    &__subtitle {
+      @include block-model(30px 0 10px);
+  
+      @include text-styles(16px, 1.18);
+      color: $text-color;
+      text-align: center;
+      font-weight: 500;
+    }
+  
+    &__description {
+      @include block-model(0 0 16px);
+  
+      @include text-styles(16px, 1.18);
+      color: #757575;
+      text-align: center;
+    }
+  }

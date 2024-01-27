@@ -1,0 +1,15 @@
+section.gallery
+	.container
+		ul.gallery__list
+			each galleryList in galleryListVar
+				li.gallery__item(data-aos=galleryList.aos data-aos-duration="750" data-aos-delay=galleryList.aosDelay)
+					a.gallery__focus(href="./portfolio.html")
+						.gallary__overflow
+							img.gallery__img(src=galleryList.imgSrc, alt=galleryList.imgAlt)
+							p.gallery__text.
+								Ресурс пропонує комплексні пропозиції з різним рівнем
+								функціоналу та сервісів. Все це дозволить відвідувачу
+								отримати вичерпні відомості про компанію чи приватну особу.
+						.gallery__box
+							h2.gallery__title= galleryList.titleContent
+							p.gallery__description= galleryList.descriptionContent

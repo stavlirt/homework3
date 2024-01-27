@@ -1,0 +1,330 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+  
+    background-color: rgba(0, 0, 0, 0.2);
+  
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &.is-hidden {
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    &.is-hidden .modal {
+      transform: translate(-50%, -50%) scale(0);
+  
+      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+  
+    @include size(100vw, 100%);
+    @include block-model(0, 40px, none, 4px);
+    max-height: 609px;
+  
+    overflow-y: scroll;
+    background-color: $light-text-color;
+    transform: translate(-50%, -50%);
+  
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    @media screen and (min-width: 480px) {
+      @include size(450px, 100%);
+    }
+  
+    @media screen and (min-width: 1200px) {
+      @include size(528px, 100%);
+      max-height: 581px;
+    }
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    &__close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+  
+      @include size(30px, 30px);
+      @include block-model(0 0 2px auto, 0, 1px solid rgba(0, 0, 0, 0.1), 50%);
+  
+      @extend %flex;
+  
+      background-color: $light-text-color;
+  
+      &:hover .modal__cross,
+      &:focus .modal__cross {
+        fill: $blue;
+      }
+    }
+  
+    &__cross {
+      @include size(18px, 18px);
+  
+      transition: fill $transition;
+    }
+  
+    &__title {
+      @include block-model(0 auto 12px);
+      max-width: 263px;
+  
+      @include text-styles(20px, normal, 0.6px);
+      color: $text-color;
+      text-align: center;
+      font-weight: 700;
+  
+      @media screen and (min-width: 1200px) {
+        max-width: 448px;
+      }
+    }
+  
+    &__list {
+      @include block-model(0 0 10px);
+  
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    &__item {
+      @include size(100%);
+    }
+  
+    &__label {
+      @include block-model(0 0 4px);
+  
+      @include text-styles(12px, normal, 0.12px);
+      color: #757575;
+    }
+  
+    &__position {
+      position: relative;
+  
+      @include size(100%);
+      display: inline-block;
+    }
+  
+    &__input {
+      @include size(100%, 40px);
+      @include block-model(
+        0,
+        11px 12px 11px 42px,
+        1px solid rgba(33, 33, 33, 0.2),
+        4px
+      );
+  
+      font-size: 12px;
+      color: $text-color;
+  
+      transition: border $transition;
+  
+      @media screen and (min-width: 480px) {
+        @include size(370px, 40px);
+      }
+  
+      @media screen and (min-width: 1200px) {
+        @include size(448px, 40px);
+      }
+  
+      &:focus {
+        @include block-model(0, 11px 12px 11px 42px, 1px solid $blue, 4px);
+      }
+  
+      &:focus + .modal__svg {
+        fill: $blue;
+      }
+    }
+  
+    &__svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+  
+      @include size(18px, 18px);
+  
+      transform: translate(0, -50%);
+  
+      transition: fill $transition;
+    }
+  
+    &__textarea {
+      @include size(100%, 120px);
+      @include block-model(0, 12px 16px, 1px solid rgba(33, 33, 33, 0.2), 4px);
+  
+      resize: none;
+  
+      @include text-styles(12px, normal, 0.12px);
+      color: $text-color;
+  
+      transition: border $transition;
+  
+      @media screen and (min-width: 480px) {
+        @include size(370px, 120px);
+      }
+  
+      @media screen and (min-width: 1200px) {
+        @include size(448px, 120px);
+      }
+  
+      &:focus {
+        @include block-model(0, 12px 16px, 1px solid $blue, 4px);
+      }
+  
+      &::placeholder {
+        @include text-styles(12px, normal, 0.12px);
+        color: rgba(117, 117, 117, 0.5);
+      }
+    }
+  
+    &__flex {
+      @include block-model(20px 0 30px);
+  
+      @extend %flex;
+      gap: 8.5px;
+  
+      @media screen and (min-width: 480px) {
+        position: static;
+      }
+    }
+  
+    &__block {
+      position: relative;
+  
+      @media screen and (min-width: 336px) {
+        @include block-model(0, 17px 0 0);
+      }
+  
+      @media screen and (min-width: 480px) {
+        @include block-model();
+      }
+    }
+  
+    &__checkbox {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+  
+      @include size(16px, 15px);
+  
+      opacity: 0;
+      cursor: pointer;
+  
+      @media screen and (min-width: 336px) {
+        top: 50%;
+      }
+  
+      @media screen and (min-width: 480px) {
+        top: auto;
+        left: 46px;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        left: 0;
+      }
+  
+      &:checked + .modal__check {
+        opacity: 1;
+      }
+  
+      &:checked ~ .modal__fake {
+        opacity: 0;
+      }
+    }
+  
+    &__svg--fake {
+      @include size(16px, 15px);
+    }
+  
+    &__check {
+      position: absolute;
+      left: 0;
+  
+      @include size(16px, 15px);
+  
+      opacity: 0;
+  
+      @media screen and (min-width: 336px) {
+        top: 50%;
+      }
+  
+      @media screen and (min-width: 480px) {
+        top: auto;
+        left: 46px;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        left: 0;
+      }
+    }
+  
+    &__svg--check {
+      @include size(100%, 100%);
+    }
+  
+    &__label--checkbox {
+      position: relative;
+  
+      @media screen and (min-width: 480px) {
+        display: flex;
+        gap: 5.5px;
+      }
+    }
+  
+    &__span {
+      @include text-styles(12px, 1.71, 0.42px);
+      color: #757575;
+    }
+  
+    &__conditions {
+      position: absolute;
+      top: 22px;
+      left: 60px;
+  
+      @include text-styles(12px, 1.71, 0.42px);
+      color: $blue;
+      text-decoration: underline;
+  
+      @media screen and (min-width: 336px) {
+        left: 0;
+      }
+  
+      @media screen and (min-width: 480px) {
+        position: static;
+      }
+    }
+  
+    &__btn {
+      @include block-model(0 auto, 10px 52px, none, 4px);
+  
+      @include text-styles(16px, 1.87, 0.96px);
+      color: $light-text-color;
+      text-align: center;
+      font-weight: 700;
+  
+      background-color: $blue;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  
+      transition: transform $transition;
+  
+      &:hover,
+      &:focus {
+        transform: scale(1.075);
+      }
+    }
+  }

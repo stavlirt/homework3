@@ -1,0 +1,19 @@
+@import "./utils/vars";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/keyframes";
+
+@import "./base/reset";
+@import "./base/common";
+
+@import "./utils/animate";
+
+@import "./components/header";
+@import "./partials/main/hero";
+@import "./partials/main/adventage";
+@import "./partials/main/classes";
+@import "./partials/main/team";
+@import "./partials/main/clients";
+@import "./components/footer";
+@import "./partials/main/modal";
+@import "./components/menu";

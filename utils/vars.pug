@@ -1,0 +1,306 @@
+-
+	//- mixins
+
+	let socialListVar = [
+		{
+			linkHref: 'https://www.instagram.com/',
+			useHref: './images/icons/sprite.svg#icon-instagram'
+		},
+		{
+			linkHref: 'https://twitter.com/',
+			useHref: './images/icons/sprite.svg#icon-twitter'
+		},
+		{
+			linkHref: 'https://www.facebook.com/',
+			useHref: './images/icons/sprite.svg#icon-facebook'
+		},
+		{
+			linkHref: 'https://www.linkedin.com/',
+			useHref: './images/icons/sprite.svg#icon-linkedin'
+		}
+	]
+
+	//- menu
+
+	let menuContactsVar = [
+		{
+			secondLinkClass: 'menu__contact--tel',
+			linkHref: 'tel:+380961111111',
+			linkContant: '+38 096 111 11 11'
+		},
+		{
+			linkHref: 'mailto:info@devstudio.com',
+			linkContant: 'info@devstudio.com'
+		}
+	]
+
+	let menuSocialsVar = [
+		{
+			linkContent: 'Instagram',
+			linkHref: 'https://www.instagram.com'
+		},
+		{
+			linkContent: 'Twitter',
+			linkHref: 'https://twitter.com/'
+		},
+		{
+			linkContent: 'Facebook',
+			linkHref: 'https://uk-ua.facebook.com'
+		},
+		{
+			linkContent: 'LinkedIn',
+			linkHref: 'https://ua.linkedin.com'
+		}
+	]
+
+	//- header
+
+	let contactsListVar = [
+		{
+			linkHref: 'mailto:info@devstudio.com',
+			linkContent: 'info@devstudio.com',
+			secondIconClass: 'contacts-list__icon--envelope',
+			useHref: './images/icons/sprite.svg#icon-envelope'
+		},
+		{
+			linkHref: 'tel:+380961111111',
+			linkContent: '+38 096 111 11 11',
+			secondIconClass: 'contacts-list__icon--tel',
+			useHref: './images/icons/sprite.svg#icon-smartphone'
+		}
+	]
+
+	//- adventage
+
+	let adventageListVar = [
+		{
+			aos: 'fade-up-right',
+			titleContent: 'УВАГА ДО ДЕТАЛЕЙ',
+			textContent: 'Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.'
+		},
+		{
+			aos: 'fade-up-right',
+			aosDelay: 100,
+			titleContent: 'ПУНКТУАЛЬНІСТЬ',
+			textContent: 'Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.'
+		},
+		{
+			aos: 'fade-up-left',
+			aosDelay: 100,
+			titleContent: 'ПЛАНУВАННЯ',
+			textContent: 'Так само консультація з широким активом значною мірою зумовлює.'
+		},
+		{
+			aos: 'fade-up-left',
+			titleContent: 'СУЧАСНІ ТЕХНОЛОГІЇ',
+			textContent: 'Значимість цих проблем настільки очевидна, що реалізація планових завдань.'
+		}
+	]
+
+	// classes
+
+	let classesListVar = [
+		{
+			aos: 'flip-left',
+			aosDelay: '500',
+			imgSrc: './images/main/classes-1.webp',
+			imgAlt: 'картинка планшета',
+			textContent: 'Десктопні додатки'
+		},
+		{
+			aos: 'flip-up',
+			imgSrc: './images/main/classes-2.webp',
+			imgAlt: 'картинка ноутбука',
+			textContent: 'Мобільні додатки'
+		},
+		{
+			aos: 'flip-right',
+			aosDelay: '1000',
+			imgSrc: './images/main/classes-3.webp',
+			imgAlt: 'картинка ноутбука',
+			textContent: 'Дизайнерські рішення'
+		}
+	]
+
+	//- team
+
+	let teamListVar = [
+		{
+			aos: 'fade-up',
+			imgSrc: './images/main/team-1.webp',
+			subtitleContent: 'Ігор Дем\'яненко',
+			textContent: 'Product Designer'
+		},
+		{
+			aos: 'fade-down',
+			aosDelay: '500',
+			imgSrc: './images/main/team-2.webp',
+			subtitleContent: 'Ольга Рєпіна',
+			textContent: 'Frontend Developer'
+		},
+		{
+			aos: 'fade-up',
+			aosDelay: '1000',
+			imgSrc: './images/main/team-3.webp',
+			subtitleContent: 'Микола Тарасов',
+			textContent: 'Marketing'
+		},
+		{
+			aos: 'fade-down',
+			aosDelay: '1500',
+			imgSrc: './images/main/team-4.webp',
+			subtitleContent: 'Михайло Єрмаков',
+			textContent: 'UI Designer'
+		}
+	]
+
+	//- clients
+
+	let clientsListVar = [
+		{
+			aos: 'zoom-in',
+			useHref: './images/icons/sprite.svg#icon-company1'
+		},
+		{
+			aos: 'zoom-out',
+			useHref: './images/icons/sprite.svg#icon-company2'
+		},
+		{
+			aos: 'zoom-in',
+			useHref: './images/icons/sprite.svg#icon-company3'
+		},
+		{
+			aos: 'zoom-out',
+			useHref: './images/icons/sprite.svg#icon-company4'
+		},
+		{
+			aos: 'zoom-in',
+			useHref: './images/icons/sprite.svg#icon-company5'
+		},
+		{
+			aos: 'zoom-out',
+			useHref: './images/icons/sprite.svg#icon-company6'
+		}
+	]
+
+	//- footer
+
+	let footerListVar = [
+		{
+			linkHref: 'mailto:info@devstudio.com',
+			linkContent: 'info@devstudio.com'
+		},
+		{
+			linkHref: 'tel:+380961111111',
+			linkContent: '+38 096 111 11 11'
+		}
+	]
+
+	//- modal
+
+	let modalInputsVar = [
+		{
+			labelFor: 'name',
+			labelContent: 'Ім\'я',
+			inputId: 'name',
+			useHref: './images/icons/sprite.svg#icon-person'
+		},
+		{
+			labelFor: 'tel',
+			labelContent: 'Телефон',
+			inputId: 'tel',
+			inputType: 'tel',
+			useHref: './images/icons/sprite.svg#icon-phone'
+		},
+		{
+			labelFor: 'mail',
+			labelContent: 'Пошта',
+			inputId: 'mail',
+			inputType: 'email',
+			useHref: './images/icons/sprite.svg#icon-email'
+		}
+	]
+
+	//- navigation
+
+	let navigationButtonsVar = [
+		'Усі',
+		'Веб-сайти',
+		'Додатки',
+		'Дизайн',
+		'Маркетинг'
+	]
+
+	//- gallery
+
+	let galleryListVar = [
+		{
+			aos: 'fade-up-right',
+			aosDelay: '100',
+			imgSrc: './images/portfolio/gallery-1.webp',
+			imgAlt: 'фото ноутбука',
+			titleContent: 'Технокряк',
+			descriptionContent: 'Веб-сайт'
+		},
+		{
+			aos: 'fade-up',
+			imgSrc: './images/portfolio/gallery-2.webp',
+			imgAlt: 'фото баскетболістів',
+			titleContent: 'Постер New Orlean vs Golden Star',
+			descriptionContent: 'Дизайн'
+		},
+		{
+			aos: 'fade-up-left',
+			aosDelay: '100',
+			imgSrc: './images/portfolio/gallery-3.webp',
+			imgAlt: 'логотип ресторану',
+			titleContent: 'Ресторан Seafood',
+			descriptionContent: 'Додаток'
+		},
+		{
+			aos: 'fade-up-right',
+			aosDelay: '100',
+			imgSrc: './images/portfolio/gallery-4.webp',
+			imgAlt: 'фото навушників',
+			titleContent: 'Проєкт Prime',
+			descriptionContent: 'Маркетинг'
+		},
+		{
+			aos: 'fade-up',
+			imgSrc: './images/portfolio/gallery-5.webp',
+			imgAlt: 'фото коробок',
+			titleContent: 'Проєкт Boxes',
+			descriptionContent: 'Додаток'
+		},
+		{
+			aos: 'fade-up-left',
+			aosDelay: '100',
+			imgSrc: './images/portfolio/gallery-6.webp',
+			imgAlt: 'фото монітора',
+			titleContent: 'Inspiration has no Borders',
+			descriptionContent: 'Веб-сайт'
+		},
+		{
+			aos: 'fade-up-right',
+			aosDelay: '100',
+			imgSrc: './images/portfolio/gallery-7.webp',
+			imgAlt: 'фото журналу',
+			titleContent: 'Видання Limited Edition',
+			descriptionContent: 'Дизайн'
+		},
+		{
+			aos: 'fade-up',
+			imgSrc: './images/portfolio/gallery-8.webp',
+			imgAlt: 'Проєкт LAB',
+			titleContent: 'Проєкт LAB',
+			descriptionContent: 'Маркетинг'
+		},
+		{
+			aos: 'fade-up-left',
+			aosDelay: '100',
+			imgSrc: './images/portfolio/gallery-9.webp',
+			imgAlt: 'фото ноутбука',
+			titleContent: 'Growing Business',
+			descriptionContent: 'Додаток'
+		}
+	]

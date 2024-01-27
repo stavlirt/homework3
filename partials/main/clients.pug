@@ -1,0 +1,9 @@
+section.clients
+	.container
+		h1.clients__title Постійні клієнти
+		ul.clients__list
+			each clientsList in clientsListVar
+				li.clients__item(data-aos-duration='500' data-aos=clientsList.aos)
+					a.clients__focus(href='./index.html')
+						svg.clients__icon
+							use(href=clientsList.useHref)

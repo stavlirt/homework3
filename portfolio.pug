@@ -1,0 +1,55 @@
+extends ./base/layout 
+
+block css 
+	link(rel="stylesheet" href="./dist/css/portfolio.min.css")
+
+block content 
+
+	-
+		let navigationList = [
+			{
+				secondPageClass: 'header__link--studio',
+				pageContent: 'Студія',
+				pageHref: './index.html'
+			},
+			{
+				secondPageClass: 'header__link--active',
+				pageContent: 'Портфоліо',
+				pageHref: './portfolio.html'
+			},
+			{
+				secondPageClass: 'header__link--contacts',
+				pageContent: 'Контакти',
+				pageHref: './index.html'
+			}
+		]
+
+		let menuListVar = [
+			{
+				secondPageClass: 'menu__link--studio',
+				pageContent: 'Студія',
+				pageHref: './index.html'
+			},
+			{
+				secondPageClass: 'menu__link--active',
+				pageContent: 'Портфоліо',
+				pageHref: './portfolio.html'
+			},
+			{
+				secondPageClass: 'menu__link--contacts',
+				pageContent: 'Контакти',
+				pageHref: './index.html'
+			}
+		]
+
+	include ./utils/vars
+	include ./utils/mixins
+
+	include ./components/header
+	main
+		include ./partials/portfolio/navigation
+		include ./partials/portfolio/gallery
+	include ./components/footer
+	include ./components/menu
+
+	include ./base/scripts

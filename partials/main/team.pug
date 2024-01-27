@@ -1,0 +1,10 @@
+section.team
+	.container
+		h2.team__title Наша команда
+		ul.team__list
+			each teamList in teamListVar
+				li.team__item(data-aos-duration='1000' data-aos=teamList.aos data-aos-delay=teamList.aosDelay)
+					img.team-img(src=teamList.imgSrc alt='фото людини')
+					h3.team__subtitle= teamList.subtitleContent
+					p.team__description= teamList.textContent
+					+social('social__focus social__focus--team', 'social__icon social__icon--team')

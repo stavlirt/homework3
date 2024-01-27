@@ -1,0 +1,47 @@
+.classes {
+    @include block-model(0, 0 0 94px);
+    display: none;
+  
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  
+    &__title {
+      @include block-model(0 0 50px);
+  
+      @include text-styles(36px, 1.16);
+      font-weight: 700;
+      color: $text-color;
+      text-align: center;
+    }
+  
+    &__list {
+      @extend %flex;
+      gap: 30px;
+    }
+  
+    &__item {
+      position: relative;
+    }
+  
+    &__img {
+      @include size(370px);
+    }
+  
+    &__text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  
+      @include size(370px, 70px);
+      @include block-model(0, 27px 0);
+  
+      @include text-styles(14px, normal, 0.42px);
+      color: $light-text-color;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+  
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
